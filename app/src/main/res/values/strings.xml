@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">UberVet-frontend</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
+    <string name="senha">Senha</string>
     <string name="login">Login</string>
-    <string name="novo_usuario">Novo usuario</string>
+    <string name="novo_usuario">Novo usuário</string>
     <string name="name">Nome</string>
-    <string name="especializacao">Especializacao</string>
+    <string name="especializacao">Especialização</string>
     <string name="endereco">Endereco</string>
     <string name="confirmar">Confirmar</string>
+    <string name="adicionar_novo_veterinario">Adicionar novo veterinário</string>
+    <string name="registro">Registro</string>
+    <string name="id">Id</string>
+    <string name="telefone">Telefone</string>
 </resources>

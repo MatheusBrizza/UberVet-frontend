@@ -10,7 +10,15 @@
         android:id="@+id/vp_home"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_novo_veterinario"
         tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btn_novo_veterinario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adicionar_novo_veterinario"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

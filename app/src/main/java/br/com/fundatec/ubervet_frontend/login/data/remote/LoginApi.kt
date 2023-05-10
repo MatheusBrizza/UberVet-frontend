@@ -10,4 +10,6 @@ interface LoginApi {
     suspend fun login(
         @Body veterinario: Veterinario
     ): Response<Boolean>
+
+
 }

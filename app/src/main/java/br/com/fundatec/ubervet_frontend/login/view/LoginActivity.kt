@@ -31,9 +31,9 @@ class LoginActivity : AppCompatActivity(){
 
     private fun configLoginButton() {
         binding.btnLogin.setOnClickListener {
-            viewModel.loginUser(
+            viewModel.loginVeterinario(
                 email = binding.etEmail.text.toString(),
-                senha = binding.etPassword.text.toString()
+                senha = binding.etSenha.text.toString()
             )
         }
     }
