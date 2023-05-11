@@ -13,6 +13,22 @@ class RemoteVeterinarioDataSource {
         .createNetworkClient()
         .create(VeterinarioApi::class.java)
 
+    suspend fun listarTodosVeterinarios(): List<VeterinarioResponse> {
+        try{
+            val veterinarioResponse = service.listarTodosVeterinarios()
+            if (veterinarioResponse.isSuccessful) {
+                Log.e("VeterinarioDataSourceListar","body from response: " + "${veterinarioResponse.body()}")
+                return veterinarioResponse.body()!!
+            } else {
+                return listOf()
+            }
+        } catch (ex: Exception) {
+            Log.e("VeterinarioDataSourceFalhaListar", ex.message ?: "Lista não carregada" )
+            return listOf()
+        }
+
+    }
+
     suspend fun criarVeterinario(veterinarioRequest: VeterinarioRequest): VeterinarioResponse? {
         return withContext(Dispatchers.IO) {
             try{

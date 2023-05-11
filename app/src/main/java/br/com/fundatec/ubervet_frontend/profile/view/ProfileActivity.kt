@@ -31,6 +31,7 @@ class ProfileActivity: AppCompatActivity() {
                 email = binding.etEmail.text.toString(),
                 senha = binding.etSenha.text.toString()
             )
+            retornarHome()
         }
     }
 

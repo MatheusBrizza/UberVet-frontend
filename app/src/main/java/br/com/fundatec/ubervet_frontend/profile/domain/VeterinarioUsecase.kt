@@ -4,6 +4,7 @@ import br.com.fundatec.ubervet_frontend.login.data.remote.RemoteLoginDataSource
 import br.com.fundatec.ubervet_frontend.profile.data.local.Veterinario
 import br.com.fundatec.ubervet_frontend.profile.data.remote.RemoteVeterinarioDataSource
 import br.com.fundatec.ubervet_frontend.profile.data.remote.VeterinarioRequest
+import br.com.fundatec.ubervet_frontend.profile.data.response.VeterinarioResponse
 
 class VeterinarioUsecase {
     private val remoteLoginDataSource: RemoteLoginDataSource by lazy {
@@ -15,6 +16,10 @@ class VeterinarioUsecase {
 
     suspend fun login(email: String, senha: String) : Boolean{
         return remoteLoginDataSource.login(veterinario = Veterinario(email, senha))
+    }
+
+    suspend fun listarTodosVeterinarios(): List<VeterinarioResponse> {
+        return remoteVeterinarioDataSource.listarTodosVeterinarios()
     }
 
     suspend fun salvarVeterinario(id: String, nome: String, registro: String, especializacao: String,
