@@ -3,9 +3,8 @@ package br.com.fundatec.ubervet_frontend.home.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.fundatec.ubervet_frontend.R
 import br.com.fundatec.ubervet_frontend.databinding.ActivityHomeBinding
-import br.com.fundatec.ubervet_frontend.profile.view.ProfileActivity
+import br.com.fundatec.ubervet_frontend.login.view.LoginActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -15,13 +14,13 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        configNovoVeterinarioButton()
+        configLoginButton()
 
     }
 
-    private fun configNovoVeterinarioButton() {
+    private fun configLoginButton() {
         binding.btnNovoVeterinario.setOnClickListener {
-            startActivity(Intent(this@HomeActivity, ProfileActivity::class.java))
+            startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
         }
     }
 }

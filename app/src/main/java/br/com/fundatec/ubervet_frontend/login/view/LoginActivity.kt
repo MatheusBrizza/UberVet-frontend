@@ -6,9 +6,9 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.com.fundatec.ubervet_frontend.databinding.ActivityLoginBinding
-import br.com.fundatec.ubervet_frontend.home.view.HomeActivity
 import br.com.fundatec.ubervet_frontend.login.presentation.LoginViewModel
 import br.com.fundatec.ubervet_frontend.login.presentation.ViewState
+import br.com.fundatec.ubervet_frontend.profile.view.ProfileActivity
 
 class LoginActivity : AppCompatActivity(){
     private lateinit var binding: ActivityLoginBinding
@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity(){
 
     private fun configLoginButton() {
         binding.btnLogin.setOnClickListener {
-            viewModel.loginVeterinario(
+            viewModel.loginUsuario(
                 email = binding.etEmail.text.toString(),
                 senha = binding.etSenha.text.toString()
             )
@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity(){
     }
 
     private fun ShowSucess() {
-        startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+        startActivity(Intent(this@LoginActivity, ProfileActivity::class.java))
     }
 
     private fun showError() {

@@ -16,10 +16,10 @@ class ProfileViewModel : ViewModel() {
         VeterinarioUsecase()
     }
 
-    fun criarVeterinario(id: String, nome: String, registro: String, especializacao: String, endereco: String,
+    fun criarVeterinario(nome: String, registro: String, especializacao: String, endereco: String,
                          telefone: String,email: String, senha: String) {
         viewModelScope.launch {
-            val veterinarioCriado = usecase.salvarVeterinario(id, nome, registro, especializacao,
+            val veterinarioCriado = usecase.salvarVeterinario(nome, registro, especializacao,
                 endereco, telefone,email, senha)
             if (veterinarioCriado != null) {
                 state.value = ViewState.ShowSuccess

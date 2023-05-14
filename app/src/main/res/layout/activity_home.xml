@@ -18,7 +18,7 @@
         android:id="@+id/btn_novo_veterinario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/adicionar_novo_veterinario"
+        android:text="@string/cadastrar_novo_veterinario"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

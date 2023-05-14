@@ -16,13 +16,12 @@ class ProfileActivity: AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        configNovoVeterinarioButton()
+        configSalvarNovoVeterinarioButton()
     }
 
-    private fun configNovoVeterinarioButton() {
+    private fun configSalvarNovoVeterinarioButton() {
         binding.btnProfile.setOnClickListener {
             viewmodel.criarVeterinario(
-                id = binding.etId.text.toString(),
                 nome = binding.etName.text.toString(),
                 registro =  binding.etRegistro.text.toString(),
                 especializacao = binding.etEspecializacao.text.toString(),

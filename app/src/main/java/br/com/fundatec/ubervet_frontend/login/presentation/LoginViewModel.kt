@@ -15,7 +15,7 @@ class LoginViewModel : ViewModel() {
         VeterinarioUsecase()
     }
 
-    fun loginVeterinario(email: String, senha: String) {
+    fun loginUsuario(email: String, senha: String) {
         viewModelScope.launch {
                 val loginSuccess = usecase.login(email, senha)
             if(loginSuccess == true){

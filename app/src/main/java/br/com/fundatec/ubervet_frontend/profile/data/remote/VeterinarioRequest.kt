@@ -1,7 +1,6 @@
 package br.com.fundatec.ubervet_frontend.profile.data.remote
 
 data class VeterinarioRequest(
-    val id: String,
     val nome: String,
     val registro: String,
     val especializacao: String,
