@@ -1,7 +1,6 @@
 package br.com.fundatec.ubervet_frontend.profile.data.remote
 
 import android.util.Log
-import br.com.fundatec.ubervet_frontend.login.data.remote.LoginApi
 import br.com.fundatec.ubervet_frontend.profile.data.response.VeterinarioResponse
 import br.com.fundatec.ubervet_frontend.webservice.RetrofitNetworkClient
 import kotlinx.coroutines.Dispatchers
@@ -32,7 +31,7 @@ class RemoteVeterinarioDataSource {
     suspend fun criarVeterinario(veterinarioRequest: VeterinarioRequest): VeterinarioResponse? {
         return withContext(Dispatchers.IO) {
             try{
-                val veterinarioCriado = service.create(veterinarioRequest = veterinarioRequest)
+                val veterinarioCriado = service.salvarVeterinario(veterinarioRequest = veterinarioRequest)
                 if (veterinarioCriado.isSuccessful) {
                     veterinarioCriado.body()
                 } else {

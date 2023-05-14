@@ -1,6 +1,6 @@
 package br.com.fundatec.ubervet_frontend.login.data.remote
 
-import br.com.fundatec.ubervet_frontend.profile.data.local.Usuario
+import br.com.fundatec.ubervet_frontend.login.data.local.Usuario
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST

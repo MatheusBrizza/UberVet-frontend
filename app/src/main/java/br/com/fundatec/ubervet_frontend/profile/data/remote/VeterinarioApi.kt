@@ -13,8 +13,8 @@ interface VeterinarioApi {
     @GET("api/v1/veterinarios")
     suspend fun listarTodosVeterinarios(): Response<List<VeterinarioResponse>>
 
-    @POST("api/v1/veterinarios/profile")
-    suspend fun create(
+    @POST("api/v1/veterinarios")
+    suspend fun salvarVeterinario(
         @Body veterinarioRequest: VeterinarioRequest
     ): Response<VeterinarioResponse?>
 

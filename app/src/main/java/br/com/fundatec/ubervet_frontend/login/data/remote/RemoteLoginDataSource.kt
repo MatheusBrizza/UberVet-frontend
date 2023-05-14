@@ -1,7 +1,7 @@
 package br.com.fundatec.ubervet_frontend.login.data.remote
 
 import android.util.Log
-import br.com.fundatec.ubervet_frontend.profile.data.local.Usuario
+import br.com.fundatec.ubervet_frontend.login.data.local.Usuario
 import br.com.fundatec.ubervet_frontend.webservice.RetrofitNetworkClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

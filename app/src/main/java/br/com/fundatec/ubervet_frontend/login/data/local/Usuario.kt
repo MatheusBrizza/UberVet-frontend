@@ -1,4 +1,4 @@
-package br.com.fundatec.ubervet_frontend.profile.data.local
+package br.com.fundatec.ubervet_frontend.login.data.local
 
 data class Usuario(
     val email: String,
