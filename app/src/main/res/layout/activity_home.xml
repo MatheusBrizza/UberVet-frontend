@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".home.view.HomeActivity">
 
-    <androidx.viewpager.widget.ViewPager
+    <fragment
         android:id="@+id/vp_home"
+        android:name="br.com.fundatec.ubervet_frontend.home.view.HomeFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btn_novo_veterinario"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="16dp" />
 
     <Button
@@ -19,6 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/cadastrar_novo_veterinario"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

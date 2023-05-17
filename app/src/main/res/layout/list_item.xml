@@ -6,66 +6,98 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:layout_marginBottom="8dp"
+        android:background="@color/teal_200"
+        android:elevation="10dp"
+        android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_character"
-            android:layout_width="150dp"
-            android:layout_height="200dp"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/purple_500"
-            app:cardCornerRadius="30dp"
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/nome"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
-            <ImageView
-                android:id="@+id/iv_url"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:src="@color/teal_200" />
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/name"
             android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/cv_character"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="10dp" />
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/nome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/especializacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/especializa_o"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_especializacao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nome" />
 
         <TextView
             android:id="@+id/tv_especializacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/especializacao"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name"
-            app:layout_constraintStart_toEndOf="@+id/cv_character"
-            android:layout_marginTop="10dp"/>
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/especializacao"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <TextView
+            android:id="@+id/endereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/endere_o"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_endereco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/especializacao" />
 
         <TextView
             android:id="@+id/tv_endereco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/endereco"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/tv_especializacao"
-            app:layout_constraintStart_toEndOf="@+id/cv_character"
-            android:layout_marginTop="10dp"/>
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/endereco"
+            app:layout_constraintTop_toBottomOf="@+id/tv_especializacao" />
+
+        <TextView
+            android:id="@+id/telefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/fone"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_telefone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/endereco" />
 
         <TextView
             android:id="@+id/tv_telefone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/telefone"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/tv_endereco"
-            app:layout_constraintStart_toEndOf="@+id/cv_character"
-            android:layout_marginTop="10dp"/>
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/telefone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_endereco" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
