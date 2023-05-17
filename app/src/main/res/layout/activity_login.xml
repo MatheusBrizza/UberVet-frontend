@@ -12,9 +12,9 @@
 
         <ImageView
             android:id="@+id/iv_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_background"
+            android:layout_width="336dp"
+            android:layout_height="314dp"
+            android:src="@drawable/vetstopetspng"
             app:layout_constraintBottom_toTopOf="@+id/til_email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
